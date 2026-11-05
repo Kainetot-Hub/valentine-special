@@ -173,6 +173,16 @@ h1 {
     blink-p 0.75s step-end 6s 5;
 }
 
+@media (max-width: 600px) {
+  .typing-h1 {
+    font-size: 22px; /* Makes your main header fit smaller phone screens */
+  }
+  
+  .typing-h6 {
+    font-size: 11px; /* Gently downscales text so the full phrases fit perfectly across standard phone screens */
+  }
+}
+
 /* --- The Animation Layout Engines --- */
 @keyframes typing-p1 {
   from { width: 0; border-right-color: #7C0E44; }
