@@ -87,29 +87,31 @@ font-weight: bold;
 }
 
 @media (max-width: 600px) {
+    /* Enlarged the phone frame boundary while keeping them perfectly flush */
     .slanted-polaroid {
-        width: 110px; 
+        width: 140px; /* Increased from 100px so details look sharp on retina displays */
     }
     
     .slanted-polaroid.left-top {
-        left: 2%;
+        left: 0;
         top: 25%;
     }
     
     .slanted-polaroid.left-bottom {
-        left: 2%;
+        left: 0;
         bottom: 12%;
     }
     
     .slanted-polaroid.right-middle {
-        right: 2%;
+        right: 0;
         top: 45%;
     }
 }
 
+
 .slanted-polaroid {
     position: fixed;
-    width: 180px; 
+    width: 240px; /* Increased from 180px for a bolder, larger frame presence */
     height: auto;
     z-index: 5; 
     transition: transform 0.3s ease, opacity 0.5s ease;
@@ -121,28 +123,33 @@ font-weight: bold;
     display: block;
 }
 
+/* Hover effect remains responsive to the larger sizing bounds */
 .slanted-polaroid:hover {
-    transform: rotate(0deg) scale(1.1) !important;
+    transform: rotate(0deg) scale(1.08) !important;
     z-index: 20; 
     cursor: pointer;
 }
 
+
 .slanted-polaroid.left-top {
-    left: 4%;
+    left: 0;
     top: 15%;
-    transform: rotate(-10deg);
+    transform: rotate(-8deg);
 }
 
+/* Photo 2: Left Bottom (Pinned perfectly to the left edge) */
 .slanted-polaroid.left-bottom {
-    left: 5%;
+    left: 0;
     bottom: 15%;
-    transform: rotate(8deg);
+    transform: rotate(6deg);
 }
 
+/* Photo 3: Right Middle (Pinned perfectly to the right edge) */
 .slanted-polaroid.right-middle {
-    right: 5%;
+    right: 0;
     top: 50%;
-    transform: translateY(-50%) rotate(-7deg); 
+    /* Combines the vertical centering tool with a clean tilt adjustment */
+    transform: translateY(-50%) rotate(-6deg); 
 }
 
 #lip-bite-img {
