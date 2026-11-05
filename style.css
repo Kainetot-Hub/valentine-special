@@ -1,0 +1,141 @@
+body {
+background-color: #ffc0c0;
+font-family: Georgia, serif;
+font-weight: bold;
+font-size: 24px;
+color: #7C0E44;
+background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48cGF0aCBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMikiIGQ9Ik0yNCAzNC4zNWwtMS40NS0xLjMyQzE3LjQgMjguMzYgMTQgMjUuMjggMTQgMjEuNSAxNCAxOC40MiAxNi40MiAxNiAxOS41IDE2YzEuNzQgMCAzLjQxLjY4IDQuNSAxLjk2QzI1LjA5IDE2LjY4IDI2Ljc2IDE2IDI4LjUgMTYgMzEuNTggMTYgMzQgMTguNDIgMzQgMjEuNWMwIDMuNzgtMy40IDYuODYtOC41NSAxMS41NEwyNCAzNC4zNXoiLz48L3N2Zz4=");
+background-size: 150px 150px;
+background-repeat: repeat;
+}
+
+img {
+  max-width: 90%; 
+  height: auto !important;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+.page { display: none; width: 100%; height: 100%; }
+
+.page.active { display: block; }
+
+.curved-rectangle {
+position: absolute;
+ top: 30%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 200px;
+ height: 60px;
+background-color: #AA5E7A; 
+border-radius: 20px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: #F2DACE;
+ font-family: Georgia, serif;
+font-size: 20px;
+font-weight: bold;
+}
+
+.btn-link {
+ text-decoration: none;
+ display: inline-block;
+ }
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F2DACE; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.logo-spinner {
+  width: 100px; 
+  height: auto;
+  animation: spin 2s linear infinite; 
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.typing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-family: georgia, serif;
+  font-size: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #7C0E44; 
+  width: 0; 
+  animation: 
+    typing-h1 2s steps(22, end) forwards,
+    blink-h1 0.75s step-end 3; 
+}
+
+.typing-h6 {
+  font-family: georgia, serif;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid transparent; 
+  width: 0;
+}
+
+.typing-h6.start-typing {
+  animation: 
+    typing-h6 4s steps(93, end) 2.5s forwards,
+    blink-h6 0.75s step-end 2.5s 5;
+}
+
+@keyframes typing-h6 {
+  from { 
+    width: 0; 
+    border-right-color: #7C0E44; 
+  }
+  to { 
+    width: 1100px; /* Increased from 950px to make room for "happiness" */
+    border-right-color: transparent; 
+  }
+}
+
+@keyframes blink-h6 {
+  from, to { border-color: transparent; }
+  50% { border-color: #7C0E44; }
+}
+
+@keyframes typing-h1 {
+  from { width: 0; border-right-color: #7C0E44; }
+  to { width: 440px; border-right-color: transparent; } 
+}
+
+@keyframes blink-h1 {
+  from, to { border-color: transparent; }
+  50% { border-color: #7C0E44; }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaine's web</title>
+    <link rel="icon" type="image/png" href="kainetot-right.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loading-screen">
+         <img src="kainetot-right.png" alt="Loading..." class="logo-spinner">
+    </div>
+
+    <!-- PAGE 1: Your Main Content (The Question) -->
+    <div id="page-ask" class="page active">
+        <div id="main-content">
+            <img src="gift.png" alt="Gift box" style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%); height: 400px; width: 450px;">
+            <img src="cute.png" alt="Kainetot cute" style="position: absolute; top: 85%; left: 50%; transform: translate(-50%, -50%); height: 200px; width: 200px;">
+            
+            <table style="position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                <tr>
+                    <td>Did you accept the gift?</td>
+                </tr>
+            </table>
+    
+         <div class="btn-link" onclick="goToAcceptedPage()" style="cursor: pointer;">
+                <div class="curved-rectangle">
+                    Yes!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-accepted" class="page">
+        <div class="typing-container" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 10%;">
+          
+            <h1 class="typing-h1">Happy Valentine's Day!</h1>
+            <h6 class="typing-h6 delay-typing">Thank you for accepting the gift! I hope you have a wonderful Valentine's Day filled with love and happiness.</h6>
+        </div>
+        
+        <img src="lip bite.png" alt="Kainetot" style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%); height: 450px; width: 450px; opacity: 0; animation: fadeIn 2.5s ease-in-out 2s forwards;">
+
+        <audio id="bg-music" src="sexy sax.mp3" loop></audio>
+    </div>
+
+    <script>
+        window.addEventListener('load', function () {
+        const loader = document.getElementById('loading-screen');
+    
+        setTimeout(() => {
+        loader.style.opacity = '0';
+      
+        setTimeout(() => {
+        loader.style.display = 'none';
+        }, 500); 
+      
+        },2500); 
+        });
+    </script>
+
+    <script src="accepted.js"></script>
+</body>
+</html>
