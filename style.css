@@ -87,27 +87,41 @@ font-weight: bold;
 }
 
 @media (max-width: 600px) {
+    /* Scale them down so they fit mobile displays without overlapping text */
+    .slanted-polaroid {
+        width: 130px !important; 
+    }
+    
     .slanted-polaroid.left-top {
-        left: -10px !important;
+        left: -15px !important; /* Pushes the blank white edge slightly off screen */
         top: 25% !important;
     }
+    
     .slanted-polaroid.left-bottom {
-        left: -10px !important;
+        left: -15px !important;
         bottom: 12% !important;
     }
+    
     .slanted-polaroid.right-middle {
-        right: -10px !important;
+        right: -15px !important;
         top: 45% !important;
     }
 }
 
 .slanted-polaroid {
-    position: fixed;
+    position: absolute; /* Switched to absolute layout alignment */
     width: 240px; 
     height: auto;
-    /* --- CRUCIAL: Low z-index forces them underneath your text and images --- */
-    z-index: 1; 
-    transition: transform 0.3s ease, opacity 0.5s ease;
+    z-index: 1; /* Tucks them underneath your text and center images */
+    display: none; /* HIDES THEM on the first screen so they don't block the gift! */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Tells the computer to display them when the page switches */
+.page.active .slanted-polaroid {
+    display: block;
+    opacity: 1;
 }
 
 .slanted-polaroid img {
@@ -116,30 +130,23 @@ font-weight: bold;
     display: block;
 }
 
-/* Hover effect stays active, but keeps them under the main text layers */
-.slanted-polaroid:hover {
-    transform: rotate(0deg) scale(1.08) !important;
-    z-index: 2; /* Keeps them safely beneath central content groups */
-    cursor: pointer;
-}
-
 .slanted-polaroid.left-top {
-    left: -15px !important; 
-    top: 15% !important;
+    left: 0px !important; 
+    top: 10% !important;
     transform: rotate(-8deg);
 }
 
-/* Photo 2: Left Bottom (Forced to the absolute glass edge) */
+/* Photo 2: Left Bottom */
 .slanted-polaroid.left-bottom {
-    left: -15px !important;
-    bottom: 15% !important;
+    left: 0px !important;
+    bottom: 10% !important;
     transform: rotate(6deg);
 }
 
-/* Photo 3: Right Middle (Forced to the absolute glass edge) */
+/* Photo 3: Right Middle */
 .slanted-polaroid.right-middle {
-    right: -15px !important;
-    top: 50% !important;
+    right: 0px !important;
+    top: 45% !important;
     transform: translateY(-50%) rotate(-6deg); 
 }
 
