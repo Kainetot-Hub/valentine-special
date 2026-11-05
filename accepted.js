@@ -8,22 +8,26 @@
             }, 2500);
         });
 
-        function goToAcceptedPage() {
-    
-            const music = document.getElementById('bg-music');
-            if (music) {
-                music.play().catch(err => console.log("Audio play gesture bypass:", err));
-            }
+function goToAcceptedPage() {
+    // 1. Swaps active screens
+    document.getElementById('page-ask').classList.remove('active');
+    document.getElementById('page-accepted').classList.add('active');
 
-            document.getElementById('page-ask').classList.remove('active');
-            document.getElementById('page-accepted').classList.add('active');
+    // 2. Play music assets
+    const music = document.getElementById('bg-music');
+    if (music) { music.play().catch(e => console.log(e)); }
 
-            setTimeout(() => {
-                const paragraph = document.querySelector('.typing-h6');
-                if (paragraph) {
-                    paragraph.classList.add('start-typing');
-                }
-            }, 2500);
+    // 3. Kickoff paragraph triggers
+    const lines = document.querySelectorAll('.typing-h6');
+    lines.forEach(line => line.classList.add('start-typing'));
+
+    // 4. TRIGER IMAGE APPEARANCE
+    setTimeout(() => {
+        const image = document.getElementById('lip-bite-img');
+        if (image) {
+            image.classList.add('fade-in');
+        }
+    }, 2000); // Fades into place precisely 2 seconds after page swap
 }
 
 function allowMusic() {
@@ -70,3 +74,8 @@ window.onload = function() {
         }
     }, 2500);
 };
+
+const paragraphs = document.querySelectorAll('.typing-h6');
+paragraphs.forEach(p => {
+    p.classList.add('start-typing');
+});

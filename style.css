@@ -88,18 +88,18 @@ font-weight: bold;
 
 #lip-bite-img {
     position: fixed;
-    bottom: -5%;    
+    bottom: 0 !important; /* Force it up onto the screen pixel floor */
     left: 50%;
     transform: translateX(-50%);
     
-  
-    width: 40vw;    
+    /* Responsive sizing based on screen dimensions */
+    width: 40vw;     
     max-width: 320px; 
-    min-width: 240px;
+    min-width: 240px; 
     
     height: auto;
-    opacity: 0;    
-    z-index: 10;
+    opacity: 0; /* Starts hidden until your JS adds .fade-in */
+    z-index: 999; /* Force it on top of your heart background wrapper layers */
 }
 
 .fade-in {
@@ -117,8 +117,8 @@ font-weight: bold;
 
 @media (max-width: 600px) {
     #lip-bite-img {
-        width: 65vw;    /* Takes up 65% of the phone's narrow screen width */
-        bottom: -4%;    /* Tightens the bottom alignment for mobile screen ratios */
+        width: 65vw;   
+        bottom: -4%;  
     }
 }
 
@@ -154,26 +154,38 @@ h1 {
   overflow: hidden;
   border-right: 3px solid transparent; 
   width: 0;
+  margin: 5px 0; /* Adds clean spacing between the lines */
 }
 
-.typing-h6.start-typing {
+/* PHRASE 1: Types after the H1 finishes (Waits 2.5 seconds) */
+.typing-h6.phrase-1.start-typing {
+  /* 52 steps for the 52 characters in Phrase 1 */
   animation: 
-    typing-h6 4s steps(93, end) 2.5s forwards,
-    blink-h6 0.75s step-end 2.5s 5;
+    typing-p1 3.5s steps(52, end) 2.5s forwards,
+    blink-p 0.75s step-end 2.5s 5;
 }
 
-@keyframes typing-h6 {
-  from { 
-    width: 0; 
-    border-right-color: #7C0E44; 
-  }
-  to { 
-    width: 1100px; /* Increased from 950px to make room for "happiness" */
-    border-right-color: transparent; 
-  }
+/* PHRASE 2: Types after Phrase 1 finishes (Waits 6 seconds total) */
+.typing-h6.phrase-2.start-typing {
+  /* 56 steps for the 56 characters in Phrase 2 */
+  animation: 
+    typing-p2 3.5s steps(56, end) 6s forwards,
+    blink-p 0.75s step-end 6s 5;
 }
 
-@keyframes blink-h6 {
+/* --- The Animation Layout Engines --- */
+@keyframes typing-p1 {
+  from { width: 0; border-right-color: #7C0E44; }
+  to { width: 550px; border-right-color: transparent; }
+}
+
+@keyframes typing-p2 {
+  from { width: 0; border-right-color: #7C0E44; }
+  to { width: 600px; border-right-color: transparent; } 
+}
+
+/* Unified clean cursor blink engine */
+@keyframes blink-p {
   from, to { border-color: transparent; }
   50% { border-color: #7C0E44; }
 }
