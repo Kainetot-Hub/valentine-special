@@ -176,12 +176,12 @@ h1 {
 /* --- The Animation Layout Engines --- */
 @keyframes typing-p1 {
   from { width: 0; border-right-color: #7C0E44; }
-  to { width: 550px; border-right-color: transparent; }
+  to { width: 100%; border-right-color: transparent; }
 }
 
 @keyframes typing-p2 {
   from { width: 0; border-right-color: #7C0E44; }
-  to { width: 600px; border-right-color: transparent; } 
+  to { width: 100%; border-right-color: transparent; } 
 }
 
 /* Unified clean cursor blink engine */
@@ -192,7 +192,7 @@ h1 {
 
 @keyframes typing-h1 {
   from { width: 0; border-right-color: #7C0E44; }
-  to { width: 440px; border-right-color: transparent; } 
+  to { width: 100%; border-right-color: transparent; } 
 }
 
 @keyframes blink-h1 {
