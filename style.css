@@ -87,24 +87,17 @@ font-weight: bold;
 }
 
 @media (max-width: 600px) {
-    /* Enlarged the phone frame boundary while keeping them perfectly flush */
-    .slanted-polaroid {
-        width: 140px; /* Increased from 100px so details look sharp on retina displays */
-    }
-    
     .slanted-polaroid.left-top {
-        left: 0;
-        top: 25%;
+        left: -10px !important;
+        top: 25% !important;
     }
-    
     .slanted-polaroid.left-bottom {
-        left: 0;
-        bottom: 12%;
+        left: -10px !important;
+        bottom: 12% !important;
     }
-    
     .slanted-polaroid.right-middle {
-        right: 0;
-        top: 45%;
+        right: -10px !important;
+        top: 45% !important;
     }
 }
 
