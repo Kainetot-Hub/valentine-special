@@ -131,23 +131,22 @@ font-weight: bold;
 }
 
 .slanted-polaroid.left-top {
-    left: -15px; /* Pushes the white border slightly off-screen to flush the artwork */
-    top: 15%;
+    left: -15px !important; 
+    top: 15% !important;
     transform: rotate(-8deg);
 }
 
-/* Photo 2: Left Bottom */
+/* Photo 2: Left Bottom (Forced to the absolute glass edge) */
 .slanted-polaroid.left-bottom {
-    left: -15px;
-    bottom: 15%;
+    left: -15px !important;
+    bottom: 15% !important;
     transform: rotate(6deg);
 }
 
-/* Photo 3: Right Middle */
+/* Photo 3: Right Middle (Forced to the absolute glass edge) */
 .slanted-polaroid.right-middle {
-    right: -15px;
-    top: 50%;
-    /* Combines vertical centering with the rotation alignment */
+    right: -15px !important;
+    top: 50% !important;
     transform: translateY(-50%) rotate(-6deg); 
 }
 
