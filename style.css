@@ -108,12 +108,12 @@ font-weight: bold;
     }
 }
 
-
 .slanted-polaroid {
     position: fixed;
-    width: 240px; /* Increased from 180px for a bolder, larger frame presence */
+    width: 240px; 
     height: auto;
-    z-index: 5; 
+    /* --- CRUCIAL: Low z-index forces them underneath your text and images --- */
+    z-index: 1; 
     transition: transform 0.3s ease, opacity 0.5s ease;
 }
 
@@ -123,32 +123,31 @@ font-weight: bold;
     display: block;
 }
 
-/* Hover effect remains responsive to the larger sizing bounds */
+/* Hover effect stays active, but keeps them under the main text layers */
 .slanted-polaroid:hover {
     transform: rotate(0deg) scale(1.08) !important;
-    z-index: 20; 
+    z-index: 2; /* Keeps them safely beneath central content groups */
     cursor: pointer;
 }
 
-
 .slanted-polaroid.left-top {
-    left: 0;
+    left: -15px; /* Pushes the white border slightly off-screen to flush the artwork */
     top: 15%;
     transform: rotate(-8deg);
 }
 
-/* Photo 2: Left Bottom (Pinned perfectly to the left edge) */
+/* Photo 2: Left Bottom */
 .slanted-polaroid.left-bottom {
-    left: 0;
+    left: -15px;
     bottom: 15%;
     transform: rotate(6deg);
 }
 
-/* Photo 3: Right Middle (Pinned perfectly to the right edge) */
+/* Photo 3: Right Middle */
 .slanted-polaroid.right-middle {
-    right: 0;
+    right: -15px;
     top: 50%;
-    /* Combines the vertical centering tool with a clean tilt adjustment */
+    /* Combines vertical centering with the rotation alignment */
     transform: translateY(-50%) rotate(-6deg); 
 }
 
