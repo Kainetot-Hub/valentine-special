@@ -86,20 +86,77 @@ font-weight: bold;
   }
 }
 
+@media (max-width: 600px) {
+    .slanted-polaroid {
+        width: 110px; 
+    }
+    
+    .slanted-polaroid.left-top {
+        left: 2%;
+        top: 25%;
+    }
+    
+    .slanted-polaroid.left-bottom {
+        left: 2%;
+        bottom: 12%;
+    }
+    
+    .slanted-polaroid.right-middle {
+        right: 2%;
+        top: 45%;
+    }
+}
+
+.slanted-polaroid {
+    position: fixed;
+    width: 180px; 
+    height: auto;
+    z-index: 5; 
+    transition: transform 0.3s ease, opacity 0.5s ease;
+}
+
+.slanted-polaroid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.slanted-polaroid:hover {
+    transform: rotate(0deg) scale(1.1) !important;
+    z-index: 20; 
+    cursor: pointer;
+}
+
+.slanted-polaroid.left-top {
+    left: 4%;
+    top: 15%;
+    transform: rotate(-10deg);
+}
+
+.slanted-polaroid.left-bottom {
+    left: 5%;
+    bottom: 15%;
+    transform: rotate(8deg);
+}
+
+.slanted-polaroid.right-middle {
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%) rotate(-7deg); 
+}
+
 #lip-bite-img {
     position: fixed;
-    bottom: 0 !important; /* Force it up onto the screen pixel floor */
+    bottom: 0 !important; 
     left: 50%;
     transform: translateX(-50%);
     
-    /* Responsive sizing based on screen dimensions */
-    width: 40vw;     
     max-width: 450px; 
     min-width: 320px; 
     
     height: auto;
-    opacity: 0; /* Starts hidden until your JS adds .fade-in */
-    z-index: 999; /* Force it on top of your heart background wrapper layers */
+    opacity: 0; 
+    z-index: 999; 
 }
 
 .fade-in {
@@ -122,7 +179,6 @@ font-weight: bold;
     }
 }
 
-
 .typing-container {
   display: flex;
   flex-direction: column;
@@ -131,7 +187,7 @@ font-weight: bold;
 }
 
 h1, h6 {
-  max-width: 95vw; /* Keeps text inside the screen bounds */
+  max-width: 95vw; 
   text-align: center;
 }
 
@@ -154,20 +210,17 @@ h1 {
   overflow: hidden;
   border-right: 3px solid transparent; 
   width: 0;
-  margin: 5px 0; /* Adds clean spacing between the lines */
+  margin: 5px 0; 
 }
 
-/* PHRASE 1: Types after the H1 finishes (Waits 2.5 seconds) */
 .typing-h6.phrase-1.start-typing {
-  /* 52 steps for the 52 characters in Phrase 1 */
   animation: 
     typing-p1 3.5s steps(52, end) 2.5s forwards,
     blink-p 0.75s step-end 2.5s 5;
 }
 
-/* PHRASE 2: Types after Phrase 1 finishes (Waits 6 seconds total) */
 .typing-h6.phrase-2.start-typing {
-  /* 56 steps for the 56 characters in Phrase 2 */
+  
   animation: 
     typing-p2 3.5s steps(56, end) 6s forwards,
     blink-p 0.75s step-end 6s 5;
@@ -175,15 +228,14 @@ h1 {
 
 @media (max-width: 600px) {
   .typing-h1 {
-    font-size: 22px; /* Makes your main header fit smaller phone screens */
+    font-size: 22px; 
   }
   
   .typing-h6 {
-    font-size: 11px; /* Gently downscales text so the full phrases fit perfectly across standard phone screens */
+    font-size: 11px; 
   }
 }
 
-/* --- The Animation Layout Engines --- */
 @keyframes typing-p1 {
   from { width: 0; border-right-color: #7C0E44; }
   to { width: 100%; border-right-color: transparent; }
@@ -194,7 +246,6 @@ h1 {
   to { width: 100%; border-right-color: transparent; } 
 }
 
-/* Unified clean cursor blink engine */
 @keyframes blink-p {
   from, to { border-color: transparent; }
   50% { border-color: #7C0E44; }
