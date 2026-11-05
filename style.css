@@ -94,8 +94,8 @@ font-weight: bold;
     
     /* Responsive sizing based on screen dimensions */
     width: 40vw;     
-    max-width: 320px; 
-    min-width: 240px; 
+    max-width: 450px; 
+    min-width: 320px; 
     
     height: auto;
     opacity: 0; /* Starts hidden until your JS adds .fade-in */
