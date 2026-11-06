@@ -87,23 +87,24 @@ font-weight: bold;
 }
 
 @media (max-width: 600px) {
-    /* Scale them down so they fit mobile displays without overlapping text */
+    /* Uses viewport width to force them to be noticeably larger on your phone screen */
     .slanted-polaroid {
-        width: 130px !important; 
+        width: 38vw !important; /* Forces each photo to take up nearly 40% of the screen width */
+        min-width: 160px !important; /* Safety baseline so they never shrink */
     }
     
     .slanted-polaroid.left-top {
-        left: -15px !important; /* Pushes the blank white edge slightly off screen */
-        top: 25% !important;
+        left: 0px !important; 
+        top: 20% !important;
     }
     
     .slanted-polaroid.left-bottom {
-        left: -15px !important;
-        bottom: 12% !important;
+        left: 0px !important;
+        bottom: 8% !important;
     }
     
     .slanted-polaroid.right-middle {
-        right: -15px !important;
+        right: 0px !important;
         top: 45% !important;
     }
 }
@@ -116,6 +117,7 @@ font-weight: bold;
     display: none; /* HIDES THEM on the first screen so they don't block the gift! */
     opacity: 0;
     transition: opacity 0.5s ease;
+    
 }
 
 /* Tells the computer to display them when the page switches */
@@ -132,14 +134,14 @@ font-weight: bold;
 
 .slanted-polaroid.left-top {
     left: 0px !important; 
-    top: 10% !important;
+    top: 25% !important;
     transform: rotate(-8deg);
 }
 
 /* Photo 2: Left Bottom */
 .slanted-polaroid.left-bottom {
     left: 0px !important;
-    bottom: 10% !important;
+    bottom: 12% !important;
     transform: rotate(6deg);
 }
 
