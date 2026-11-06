@@ -87,20 +87,21 @@ font-weight: bold;
 }
 
 @media (max-width: 600px) {
-    /* Uses viewport width to force them to be noticeably larger on your phone screen */
     .slanted-polaroid {
-        width: 38vw !important; /* Forces each photo to take up nearly 40% of the screen width */
-        min-width: 160px !important; /* Safety baseline so they never shrink */
+        width: 38vw !important; 
+        min-width: 155px !important;
     }
     
     .slanted-polaroid.left-top {
-        left: 0px !important; 
-        top: 20% !important;
+       left: 0px !important; 
+        top: 14% !important;
+        transform: rotate(-8deg)
     }
     
     .slanted-polaroid.left-bottom {
-        left: 0px !important;
-        bottom: 8% !important;
+         left: 0px !important;
+        bottom: 4% !important;
+        transform: rotate(6deg);
     }
     
     .slanted-polaroid.right-middle {
@@ -138,14 +139,12 @@ font-weight: bold;
     transform: rotate(-8deg);
 }
 
-/* Photo 2: Left Bottom */
 .slanted-polaroid.left-bottom {
     left: 0px !important;
     bottom: 12% !important;
     transform: rotate(6deg);
 }
 
-/* Photo 3: Right Middle */
 .slanted-polaroid.right-middle {
     right: 0px !important;
     top: 45% !important;
