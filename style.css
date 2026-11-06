@@ -110,7 +110,7 @@ font-weight: bold;
 
 .slanted-polaroid {
     position: absolute; /* Switched to absolute layout alignment */
-    width: 240px; 
+    width: 350px; 
     height: auto;
     z-index: 1; /* Tucks them underneath your text and center images */
     display: none; /* HIDES THEM on the first screen so they don't block the gift! */
