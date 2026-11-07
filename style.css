@@ -53,7 +53,7 @@ overflow: hidden !important;
     max-height: 85vh !important;
     z-index: 9999 !important; 
     opacity: 0.7;
-    animation: fadeInOnly 2.5s ease-in-out forwards;
+    animation: fadeInOnly 2.5s ease-in-out forwards !important;
 
 }
    
