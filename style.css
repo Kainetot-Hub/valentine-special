@@ -16,18 +16,18 @@ overflow: hidden !important;
 
 .gift-box {
     position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 70% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
     height: 400px;
     width: 450px;
 }
 
 .cute-image {
     position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 85% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
     height: 200px;
     width: 200px;
 }
@@ -100,8 +100,8 @@ to { opacity: 1; }
 
 .curved-rectangle {
 position: absolute;
-top: 30%;
-left: 50%;
+top: 30% !important;
+left: 50% !important;
 transform: translate(-50%, -50%);
 width: 200px;
 height: 60px;
@@ -110,7 +110,7 @@ border-radius: 20px;
 display: flex;
 justify-content: center;
 align-items: center;
-color: #F2DACE;
+color: #fde1c2;
 font-family: Georgia, serif;
 font-size: 20px;
 font-weight: bold;
