@@ -18,8 +18,8 @@ overflow: hidden !important;
     border-collapse: collapse;
     margin: 0 auto;
     position: absolute; 
-    top: 20%; 
-    left: 50%; 
+    top: 20% !important; 
+    left: 50% !important; 
     transform: translate(-50%, -50%); 
     text-align: center;
 }
@@ -45,7 +45,7 @@ overflow: hidden !important;
 .fading-gif {
     position: fixed !important;
     top: 40% !important;
-    left: 62% !important;
+    left: 65% !important;
     transform: translate(-50%, -50%) !important;
     width: auto !important;
     height: auto !important;
