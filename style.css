@@ -14,9 +14,19 @@ height: 100%;
 overflow: hidden !important; 
 }
 
+.table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    position: absolute; 
+    top: 20%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center;
+}
+
 .gift-box {
     position: absolute;
-    top: 70% !important;
+    top: 65% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
     height: 400px;
@@ -25,7 +35,7 @@ overflow: hidden !important;
 
 .cute-image {
     position: absolute;
-    top: 85% !important;
+    top: 80% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
     height: 200px;
