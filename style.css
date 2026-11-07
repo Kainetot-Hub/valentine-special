@@ -217,7 +217,7 @@ font-weight: bold;
 .slanted-polaroid.left-top {
     left: 3% !important;
     right: 70% !important;
-    top: 18% !important;
+    top: 15% !important;
     transform: rotate(-8deg);
 }
 
