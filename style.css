@@ -215,14 +215,14 @@ font-weight: bold;
 }
 
 .slanted-polaroid.left-top {
-    left: 5% !important;
+    left: 3% !important;
     right: 70% !important;
     top: 18% !important;
     transform: rotate(-8deg);
 }
 
 .slanted-polaroid.left-bottom {
-    left: 5% !important;
+    left: 3% !important;
     right: 70% !important;
     bottom: 10% !important;
     transform: rotate(6deg);
